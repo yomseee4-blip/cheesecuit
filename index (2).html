@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheesecuit Staro - Kelezatan Biskuit & Keju Melimpah</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFC107',
+                            gold: '#FFA000',
+                            amber: '#FF8F00',
+                            cream: '#FFF8E1',
+                            dark: '#2D2115'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cheese-gradient {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFA000 100%);
+        }
+        .hero-pattern {
+            background-color: #FFF8E1;
+            background-image: radial-gradient(#FFC107 0.85px, #FFF8E1 0.85px);
+            background-size: 17px 17px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-amber-50/30 text-gray-800 antialiased selection:bg-brand-yellow selection:text-brand-dark">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-12 h-12 cheese-gradient rounded-2xl flex items-center justify-center shadow-md shadow-amber-200 group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-cheese text-2xl text-white"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-tight text-brand-dark">CHEESECUIT</span>
+                        <span class="text-xs font-bold tracking-widest text-brand-gold -mt-1">STARO</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+                    <a href="#home" class="hover:text-brand-gold transition-colors">Beranda</a>
+                    <a href="#about" class="hover:text-brand-gold transition-colors">Tentang Kami</a>
+                    <a href="#menu" class="hover:text-brand-gold transition-colors">Varian Rasa</a>
+                    <a href="#testimonials" class="hover:text-brand-gold transition-colors">Testimoni</a>
+                    <a href="#location" class="hover:text-brand-gold transition-colors">Lokasi & Maps</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20ingin%20memesan!" target="_blank" class="cheese-gradient text-white font-bold px-6 py-3 rounded-full shadow-lg shadow-amber-200 hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Pesan Sekarang</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-xl text-gray-700 hover:bg-amber-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-amber-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Beranda</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Tentang Kami</a>
+            <a href="#menu" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Varian Rasa</a>
+            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Testimoni</a>
+            <a href="#location" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Lokasi & Maps</a>
+            <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20ingin%20memesan!" target="_blank" class="w-full cheese-gradient text-white font-bold py-3 rounded-xl shadow-md flex items-center justify-center gap-2 mt-4">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Pesan via WhatsApp</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 hero-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100/80 border border-amber-200 text-brand-dark text-sm font-semibold">
+                        <i class="fa-solid fa-star text-brand-gold"></i>
+                        <span>Olahan Biskuit & Keju Premium</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-dark leading-tight">
+                        Perpaduan Sempurna <span class="text-transparent bg-clip-text cheese-gradient">Biskuit Renyah</span> & Keju Lumer!
+                    </h1>
+                    <p class="text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+                        Rasakan kenikmatan biskuit gurih berkrim keju melimpah di setiap gigitan **Cheesecuit Staro**. Lumer di mulut, bikin ketagihan setiap saat!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20mau%20order%20menu%20favorit!" target="_blank" class="cheese-gradient text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-amber-300/50 hover:shadow-xl hover:scale-105 active:scale-95 transition-all text-center flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="bg-white border-2 border-amber-300 text-brand-dark font-bold px-8 py-4 rounded-full hover:bg-amber-50 hover:scale-105 active:scale-95 transition-all text-center">
+                            Lihat Menu
+                        </a>
+                    </div>
+                    <!-- Micro Features -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-amber-200/60 max-w-md mx-auto md:mx-0">
+                        <div>
+                            <p class="text-xl font-bold text-brand-dark">100%</p>
+                            <p class="text-xs text-gray-500">Keju Asli Premium</p>
+                        </div>
+                        <div>
+                            <p class="text-xl font-bold text-brand-dark">Fresh</p>
+                            <p class="text-xs text-gray-500">Dibuat Setiap Hari</p>
+                        </div>
+                        <div>
+                            <p class="text-xl font-bold text-brand-dark">Fast</p>
+                            <p class="text-xs text-gray-500">Kirim Cepat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="relative flex justify-center">
+                    <div class="absolute -inset-4 cheese-gradient opacity-20 blur-2xl rounded-full"></div>
+                    <div class="relative w-full max-w-md bg-white p-4 rounded-3xl shadow-2xl border-4 border-white transform hover:rotate-1 transition-transform">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=800" 
+                             alt="Cheesecuit Staro Delicious Dessert" 
+                             class="w-full h-80 object-cover rounded-2xl shadow-inner"
+                             onerror="this.src='https://placehold.co/600x600/FFC107/FFFFFF?text=Cheesecuit+Staro'">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-amber-100">
+                            <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-brand-gold font-bold text-xl">
+                                🍰
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-medium">Bestseller!</p>
+                                <p class="text-sm font-bold text-brand-dark">Cheesecuit Staro Original</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Features Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-gold tracking-widest uppercase">Mengapa Pilih Kami</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Keistimewaan Cheesecuit Staro</p>
+                <p class="text-gray-600 mt-4">Kombinasi sempurna biskuit renyah yang dipadukan dengan balutan krim keju lumer melimpah khas Staro.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-3xl bg-amber-50/50 border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 cheese-gradient rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-md shadow-amber-200">
+                        <i class="fa-solid fa-cookie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Biskuit Reconstitution</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Dibuat dari biskuit pilihan berkualitas tinggi yang memiliki tekstur pas, tidak terlalu keras namun tetap crunchy.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-3xl bg-amber-50/50 border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 cheese-gradient rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-md shadow-amber-200">
+                        <i class="fa-solid fa-cheese"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Keju Premium Melimpah</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Saus dan krim keju melimpah yang manis, gurih, dan creamy meresap ke setiap lapisan biskuit.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-3xl bg-amber-50/50 border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 cheese-gradient rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-md shadow-amber-200">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-3">Tanpa Bahan Pengawet</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Diproduksi fresh secara higienis setiap hari demi menjaga kelezatan rasa autentik Cheesecuit Staro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu / Product Section -->
+    <section id="menu" class="py-20 bg-amber-50/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-gold tracking-widest uppercase">Pilihan Favorit</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Varian Cheesecuit Staro</p>
+                <p class="text-gray-600 mt-4">Pilih rasa favoritmu dan nikmati sensasi lumer kejunya sekarang juga!</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-amber-100 shadow-md hover:shadow-2xl transition-all flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&q=80&w=600" 
+                             alt="Cheesecuit Original" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/FFC107/FFFFFF?text=Original+Keju'">
+                        <span class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Best Seller</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Cheesecuit Original Cheese</h3>
+                        <p class="text-gray-500 text-sm mb-4 flex-grow">Perpaduan klasik biskuit crunchy dengan lapisan saus keju spesial yang manis gurih melimpah.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Harga</span>
+                                <span class="text-xl font-black text-brand-dark">Rp 35.000</span>
+                            </div>
+                            <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20mau%20pesan%20Cheesecuit%20Original%20Cheese" target="_blank" class="cheese-gradient text-white p-3 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-md shadow-amber-200">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-amber-100 shadow-md hover:shadow-2xl transition-all flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600" 
+                             alt="Cheesecuit Chocolate" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/8D6E63/FFFFFF?text=Choco+Cheese'">
+                        <span class="absolute top-4 right-4 bg-amber-800 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Favorit</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Cheesecuit Choco Crunch</h3>
+                        <p class="text-gray-500 text-sm mb-4 flex-grow">Kombinasi melimpah rasa cokelat pekat berkualitas dengan keju gurih creamy yang memanjakan lidah.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Harga</span>
+                                <span class="text-xl font-black text-brand-dark">Rp 38.000</span>
+                            </div>
+                            <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20mau%20pesan%20Cheesecuit%20Choco%20Crunch" target="_blank" class="cheese-gradient text-white p-3 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-md shadow-amber-200">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-amber-100 shadow-md hover:shadow-2xl transition-all flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=600" 
+                             alt="Cheesecuit Matcha" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/4CAF50/FFFFFF?text=Matcha+Cheese'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Cheesecuit Matcha Delight</h3>
+                        <p class="text-gray-500 text-sm mb-4 flex-grow">Sentuhan teh hijau matcha autentik khas Jepang dipadukan keju gurih yang menenangkan.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Harga</span>
+                                <span class="text-xl font-black text-brand-dark">Rp 38.000</span>
+                            </div>
+                            <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20mau%20pesan%20Cheesecuit%20Matcha%20Delight" target="_blank" class="cheese-gradient text-white p-3 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-md shadow-amber-200">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-gold tracking-widest uppercase">Kata Penikmat Staro</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Apa Kata Mereka?</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-6 rounded-3xl bg-amber-50/30 border border-amber-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Kejunya beneran melimpah dan nggak bikin enek! Pas banget buat nemenin nugas sore-sore. Pasti bakal re-order lagi sih."</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-200 font-bold flex items-center justify-center text-amber-800">
+                            S
+                        </div>
+                        <div>
+                            <p class="font-bold text-brand-dark text-sm">Siti Rahma</p>
+                            <p class="text-xs text-gray-400">Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-6 rounded-3xl bg-amber-50/30 border border-amber-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Rasa Choco Crunchnya juara banget. Biskuitnya kerasa renyah tapi begitu dapet krim kejunya langsung lumer di mulut."</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-200 font-bold flex items-center justify-center text-amber-800">
+                            B
+                        </div>
+                        <div>
+                            <p class="font-bold text-brand-dark text-sm">Budi Santoso</p>
+                            <p class="text-xs text-gray-400">Pecinta Dessert</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-6 rounded-3xl bg-amber-50/30 border border-amber-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Respon admin WhatsApp super cepat dan ramah! Pengiriman aman sampai rumah, keju masih fresh banget. Top BGT!"</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-200 font-bold flex items-center justify-center text-amber-800">
+                            A
+                        </div>
+                        <div>
+                            <p class="font-bold text-brand-dark text-sm">Amanda L.</p>
+                            <p class="text-xs text-gray-400">Food Vlogger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Maps Section -->
+    <section id="location" class="py-20 bg-amber-50/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-gold tracking-widest uppercase">Kunjungi Outlet / Titik Kami</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Lokasi & Peta</p>
+                <p class="text-gray-600 mt-4">Temukan titik mitra atau area pengiriman utama kami di sekitar Universitas Nusa Mandiri.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-amber-100 shadow-xl">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-brand-dark text-sm font-semibold">
+                        <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                        <span>Titik Utama / Kampus</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-black text-brand-dark">Universitas Nusa Mandiri</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Kami melayani pemesanan langsung, pickup, maupun pengiriman kurir instan di sekitar kawasan Universitas Nusa Mandiri dan sekitarnya.
+                    </p>
+                    <div class="space-y-3 text-sm text-gray-700">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-brand-gold font-bold">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span>Buka Setiap Hari: 10.00 - 21.00 WIB</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-brand-gold font-bold">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <span class="font-bold">0877-8978-5482</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20ingin%20tanya%20detail%20lokasi%20pengiriman!" target="_blank" class="cheese-gradient text-white font-bold px-6 py-3 rounded-xl shadow-md inline-flex items-center gap-2 hover:scale-105 active:scale-95 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Hubungi via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed for Universitas Nusa Mandiri -->
+                <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border-2 border-amber-200 shadow-inner">
+                    <iframe 
+                        title="Peta Universitas Nusa Mandiri"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.273760373463!2d106.8450146!3d-6.2263445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f3e1a0b3c7%3A0x6b77242e88a38b55!2sUniversitas%20Nusa%20Mandiri!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-16 cheese-gradient text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Siap Menikmati Kelezatan Cheesecuit Staro?</h2>
+            <p class="text-lg text-amber-100 max-w-2xl mx-auto mb-8">Pesan sekarang langsung melalui WhatsApp dan dapatkan penawaran spesial untuk pembelian hari ini!</p>
+            <a href="https://wa.me/6287789785482?text=Halo%20Cheesecuit%20Staro,%20saya%20ingin%20memesan%20sekarang!" target="_blank" class="bg-white text-brand-dark font-bold px-10 py-4 rounded-full shadow-2xl hover:bg-amber-50 hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-3 text-lg">
+                <i class="fa-brands fa-whatsapp text-green-500 text-2xl"></i>
+                <span>Hubungi 0877-8978-5482</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 pb-8 border-b border-gray-800">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 cheese-gradient rounded-xl flex items-center justify-center text-white">
+                            <i class="fa-solid fa-cheese text-xl"></i>
+                        </div>
+                        <span class="text-xl font-black text-white">CHEESECUIT STARO</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sajian kuliner penutup istimewa dengan perpaduan biskuit renyah dan lumeran keju melimpah yang menggugah selera.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="text-brand-yellow font-bold mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="#menu" class="hover:text-white transition-colors">Varian Rasa</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition-colors">Testimoni</a></li>
+                        <li><a href="#location" class="hover:text-white transition-colors">Lokasi & Maps</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-brand-yellow font-bold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-brand-yellow text-lg"></i>
+                            <a href="https://wa.me/6287789785482" target="_blank" class="hover:text-white transition-colors">+62 877-8978-5482</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-yellow text-lg"></i>
+                            <span>Siap kirim ke kota Anda</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Cheesecuit Staro. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for interactive element -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
